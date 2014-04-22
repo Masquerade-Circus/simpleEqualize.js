@@ -4,7 +4,7 @@ simpleEqualize.js
 Small 306 bytes jQuery Plugin for equalize the Width or Height of elements
 
 ## Demo
-View demo.html http://masquerade-circus.creaken.com/Plugins/simpleEqualize/
+http://masquerade-circus.creaken.com/Plugins/simpleEqualize/
 
 ##How to use:
 Call the plugin on the parent or the set of elements that you want to equalize.
