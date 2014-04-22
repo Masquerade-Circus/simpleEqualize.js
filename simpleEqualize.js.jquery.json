@@ -1,0 +1,31 @@
+{
+  "name": "simpleEqualize.js",
+  "title": "simpleEqualize",
+  "description": "Small 306 bytes jQuery Plugin for equalize the Width or Height of elements",
+  "keywords": [
+    "interface",
+	"ui",
+    "equalize",
+    "equal",
+    "height",
+    "width",
+    "layout"
+    ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Masquerade Circus",
+    "url": "http://masquerade-circus.creaken.com"
+  },
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://opensource.org/licenses/MIT"
+  }, {
+    "type": "GPLv2",
+    "url": "http://opensource.org/licenses/GPL-2.0"
+  }],
+  "homepage": "https://github.com/Masquerade-Circus/simpleEqualize.js",
+  "demo": "http://masquerade-circus.creaken.com/Plugins/simpleEqualize/",
+  "dependencies": {
+    "jquery": ">=1.4.x"
+  }
+}
