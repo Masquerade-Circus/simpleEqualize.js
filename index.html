@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<style>
+			body,div,ul,li, img, a {margin:0; padding:0; outline: 0; text-decoration: none;}
+			html,body{height: 100%;}
+			body{font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; margin: 0 auto; padding: 2%;}
+			.description{font-size: 1.4em; display: block; text-align: center;}
+			.tc{text-align: center}
+			.texto{padding: 10px;margin-bottom: 5px;}
+			.gray{color: #666;font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;}
+			.container{border: 1em; padding: 2em; margin: 2em; text-align: center;}
+			.btn{width: 30%; margin: 0 0 0 20px; padding: 0.5em 2.5em; display: inline-block; background: #ccc; cursor:pointer;}
+			.btn:hover{background: green; color: #fff}
+			.code{background: #0A0704; color: #ccc; padding: 1em; margin: 1em 2em;font-family: Monaco, Consolas, "Lucida Console", monospace;}
+			img{width: 100%; height: auto;}
+			.random, .randomFunction{display: inline-block;}
+			.panel{margin: 2em;}
+			.equalize {margin: 1em 1em 1em; padding: 1em; outline: 5px solid silver; clear: both; overflow: hidden;}
+			.equalize div{margin: 1em; outline: 5px solid silver; display: inline-block; vertical-align: top; overflow: hidden;}
+			.item1{width: 15%}
+			.item2{width: 20%}
+			.item3{width: 25%; height: 167px;}
+			
+			.button{margin: 0.5em; padding: 0.5em 1.5em; background: #ccc; color: #000; float: left; cursor: pointer;}
+			.button:hover{background: #000; color: #ccc}
+			.active{background: green; color: #fff}
+			.reset:hover{background: red; color: #fff;}
+		 </style>
+		<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="simpleEqualize.js"></script>
+		<script type="text/javascript">
+ 
+                $(function(){
+				
+						var elem = $('.equalize'), items = elem.find('div');
+						
+						 $('.button').on('click', function(){
+							switch ($(this).index()){
+								case 0: items.simpleEqualize(); break;
+								case 1: elem.simpleEqualize(true, 'div'); break;
+								case 2: items.simpleEqualize('Width'); break;
+								case 3: elem.simpleEqualize('div','Width', true); break;
+								case 4: items.attr('style',''); break;
+							}
+						 });
+						 
+                });
+				
+		</script>
+		
+	</head>
+<body>
+				<h1 class="tc"><b>simpleEqualize jQuery Plugin</b></h1>
+				<b class="description">Small 306 bytes jQuery Plugin for equalize the Width or Height of elements.</b>
+				
+				<br><br><h2>How to use: </h2>
+				Call the plugin on the parent or the set of elements that you want to equalize.
+				
+				<br><br><h2>Options: </h2>
+				<div class="code">
+					$(selector).simpleEqualize(children,prop,reset);
+					<br><br>$('elem').simpleEqualize('selector','Width||Height', true||false);
+				</div>
+				The options can be repositioned, no matter the order in which they are written. Defaults to height, no children and no reset.
+				
+				<br><br><h2>Examples: </h2>
+				<div class="code">
+							$(function(){
+							<br>
+							<br>	&nbsp;&nbsp;		var elem = $('.equalize'), items = elem.find('div');
+							<br>			
+							<br>	&nbsp;&nbsp;		 $('.button').on('click', function(){
+							<br>	&nbsp;&nbsp;&nbsp;&nbsp;			switch ($(this).index()){
+							<br>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				case 0: items.simpleEqualize(); break;
+							<br>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				case 1: elem.simpleEqualize(true, 'div'); break;
+							<br>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				case 2: items.simpleEqualize('Width'); break;
+							<br>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				case 3: elem.simpleEqualize('div','Width', true); break;
+							<br>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				case 4: items.attr('style',''); break;
+							<br>	&nbsp;&nbsp;&nbsp;&nbsp;			}
+							<br>	&nbsp;&nbsp;		 });
+							<br>			 
+							<br>	});
+				</div>
+				
+				<div>
+					<div class="button">Equalize Height</div>
+					<div class="button">Equalize Children Height, Reset true</div>
+					<div class="button">Equalize Width</div>
+					<div class="button">Equalize Children Width, Reset true</div>
+					<div class="button reset">Reset</div>
+				</div>
+				<div class="equalize">
+					<div class="item1">
+						Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro.
+					</div>
+					<div class="item2">
+						Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro.
+						<br><br>Todas estas borrascas que nos suceden son señales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aquí se sigue que, habiendo durado mucho el mal, el bien está ya cerca.
+					</div>
+					<div class="item3">
+						Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro.
+						<br><br>Todas estas borrascas que nos suceden son señales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aquí se sigue que, habiendo durado mucho el mal, el bien está ya cerca.
+						<br><br>Así que, no debes congojarte por las desgracias que a mí me suceden, pues a ti no te cabe parte dellas. Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro.
+					</div>
+				</div>
+</body>
+</html>
