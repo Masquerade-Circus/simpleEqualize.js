@@ -12,10 +12,9 @@
 		wh = w.toLowerCase();
 		r ? e[wh]('auto') : n;
 		l = e.length;
-		for (i = 0; i < l; i++) {
-			o = e.eq(i)['outer' + w]();
+		for (i = 0; i < l; i++)
+			o = e.eq(i)['outer' + w](),
 			o > m ? m = o : n;
-		}
 		e[wh](m);
 		return t;
 	};
