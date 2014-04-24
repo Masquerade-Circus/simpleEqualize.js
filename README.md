@@ -19,5 +19,4 @@ The options can be repositioned, no matter the order in which they are written. 
 # Legal
 
 Author & copyright (c) 2013: [Masquerade Circus](http://masquerade-circus.creaken.com)
-
-Dual MIT & GPLv2 license
+Dual [MIT](http://opensource.org/licenses/MIT) & [GPLv2](http://opensource.org/licenses/GPL-2.0) license

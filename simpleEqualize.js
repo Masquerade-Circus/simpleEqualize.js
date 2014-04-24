@@ -1,6 +1,6 @@
 (function ($) {
 	"use strict";
-	$.fn.simpleEqualize = function (i, l, n, o, r, w, wh) {
+	$.fn.simpleEqualize = function (i,n,o,r,w,wh) {
 		var m = -1,
 			t = this,
 			e = t;
@@ -11,8 +11,7 @@
 		});
 		wh = w.toLowerCase();
 		r ? e[wh]('auto') : n;
-		l = e.length;
-		for (i = 0; i < l; i++)
+		for (i = e.length;i--;)
 			o = e.eq(i)['outer' + w](),
 			o > m ? m = o : n;
 		e[wh](m);
